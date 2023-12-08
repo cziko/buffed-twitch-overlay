@@ -33,3 +33,10 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore dotevne file.
+.env
+
+# Ignote IDE.
+.idea/
+.idea/*

@@ -23,5 +23,8 @@ module BuffedTwitchOverlay
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    Dotenv::Railtie.load unless ENV['RAILS_ENV'] == 'production'
+
   end
 end
