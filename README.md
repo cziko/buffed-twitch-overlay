@@ -6,14 +6,30 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+  * 3.2.0
 
 * System dependencies
+  * mysql
+    * `sudo apt install mysql-server`
+    * `sudo mysql_secure_installation`
+    * `sudo apt install libmysqlclient-dev`
 
 * Configuration
+  * `touch .env`
+    * Add DATABASE_USERNAME, DATABASE_PASSWORD, DATABASE_HOST
 
 * Database creation
+  * `CREATE USER 'mysql'@'%' IDENTIFIED BY '123';`
+  * `CREATE DATABASE bto_development;`
+  * `GRANT ALL PRIVILEGES ON bto_development.* TO 'mysql'@'%';`
+  * `FLUSH PRIVILEGES;`
+  * `EXIT;`
 
 * Database initialization
+  * `rake db:migrate`
+
+* App initialization
+  * `bundle install`
 
 * How to run the test suite
 
@@ -22,3 +38,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
